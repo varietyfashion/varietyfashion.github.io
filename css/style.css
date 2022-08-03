@@ -1,10 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
-}
-
-.card{
-    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .copyrights{
@@ -20,7 +19,12 @@
     color: rgb(247, 155, 98);
 }
 
-.gents-wear{
+
+.container-fluid .card:hover{
+    box-shadow: 5px 6px 5px rgb(126, 126, 126);
+}
+
+/* .gents-wear{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -52,5 +56,5 @@
     border: none;
     margin: 20px 100px 0px 100px;
     background-color: #ededed;
-}
+} */
 
