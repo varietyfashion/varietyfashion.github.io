@@ -150,6 +150,15 @@
         </div>
       </div>
 
+      <div class="whats-app">
+        <div class="whatsapp-logo">
+          <a href="http://wa.me/918898348279?text=I'am%20interested%20in%20your%20following%20products:" >
+            <img src="../images/whats-app-logo.png" width="100%">
+          </a>  
+        </div>
+    
+      </div>
+
       <!-- Copyrights section -->
       <div class="container-fluid">
         <div class="copyrights align-middle">
@@ -169,26 +178,39 @@
     -->
 
     <script>
-      $(".btn").click(function(){
-        
-        let clothIdArr = [];
-       // if localStorage is empty then add below line
-      if(!(JSON.parse(localStorage.getItem('clothIdArr')).size() > 0)){
-        
-        localStorage.setItem('clothIdArr', JSON.stringify(clothIdArr));
-      }
+      
+      $(".whatsapp-logo").click(function(){
+        const productIds = JSON.parse(localStorage.getItem('clothIdArr'));
+        debugger;
+        console.log(productIds);
+        const prductIdsString = productIds + " ";
 
+        let href = $(".whatsapp-logo a").attr("href");
+
+        $(".whatsapp-logo a").attr("href", href + prductIdsString);
+       
+
+
+        
+        
+      });
+
+      $(".btn").click(function(){
+        let clothIdArr = [];
+        //console.log(JSON.parse(localStorage.getItem('clothIdArr')));
+
+        if(JSON.parse(localStorage.getItem('clothIdArr')) == null){
+          localStorage.setItem('clothIdArr', JSON.stringify(clothIdArr));
+        }
         const array = $(this).attr('class').split(" "); 
-        console.log(array[2]);
-        //idArray.push(array[2]);
+        //console.log(array[2]);
         
           
         clothId = JSON.parse(localStorage.getItem('clothIdArr'));
         clothId.push(array[2]);
-        console.log(clothIdArr);
+        //console.log(clothIdArr);
         localStorage.setItem('clothIdArr', JSON.stringify(clothId));
        
-        //localStorage.setItem('ClothId', idArray);
       });
     </script>
 </body>

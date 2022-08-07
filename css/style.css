@@ -41,6 +41,35 @@
     height: 100%;
     width: 100%;
 }
+
+.whats-app .whatsapp-logo
+{
+    position: fixed;
+    /* height: 200px; */
+    width: 50px;
+    right: 5%;
+    top: 85%;
+}
+
+@media only screen and (min-width: 700px)
+{
+    .whats-app .whatsapp-logo
+    {
+        width: 70px;
+        right: 5%;
+        top: 85%;
+    }
+}
+
+@media only screen and (min-width: 1000px)
+{
+    .whats-app .whatsapp-logo
+    {
+        width: 60px;
+        right: 3%;
+        top: 85%;
+    }
+}
 /* .gents-wear{
     display: flex;
     flex-direction: column;
