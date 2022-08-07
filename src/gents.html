@@ -181,17 +181,13 @@
       
       $(".whatsapp-logo").click(function(){
         const productIds = JSON.parse(localStorage.getItem('clothIdArr'));
-        debugger;
-        console.log(productIds);
+        //console.log(productIds);
         const prductIdsString = productIds + " ";
 
         let href = $(".whatsapp-logo a").attr("href");
 
         $(".whatsapp-logo a").attr("href", href + prductIdsString);
        
-
-
-        
         
       });
 
