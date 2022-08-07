@@ -51,10 +51,12 @@
               <img src="../images/Gents/Categories/Black full sleves tshirt.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title"><b>Full Sleve T-Shirt</b></h5>
-                <p class="h6" id="dynamic-price"> Rs 720.00</p>
-      
+                <div class="price">
+                  <p class="h6" id="dynamic-price"> Rs. 720.00</p>
+                  <p class="h6" id="discount-price"><s>Rs. 999.00</s></p>
+                </div>
                 <div class="add-to-cart">
-                  <button type="button" class="btn btn-primary">Add to cart</button>
+                  <button type="button" class="btn btn-primary id1">Add to cart</button>
                 </div>
               </div>
             </div>
@@ -64,11 +66,14 @@
             <div class="card h-100">
               <img src="../images/Gents/Categories/Suit.jpg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title"><b>Full Sleve T-Shirt</b></h5>
-                <p class="h6" id="dynamic-price"> Rs 720.00</p>
+                <h5 class="card-title"><b>Suit</b></h5>
+                <div class="price">
+                  <p class="h6" id="dynamic-price"> Rs. 720.00</p>
+                  <p class="h6" id="discount-price"><s>Rs. 999.00</s></p>
+                </div>
       
                 <div class="add-to-cart">
-                  <button type="button" class="btn btn-primary">Add to cart</button>
+                  <button type="button" class="btn btn-primary id2">Add to cart</button>
                 </div>
               </div>
             </div>
@@ -78,11 +83,14 @@
             <div class="card h-100">
               <img src="../images/Gents/Categories/White tshirt.jpg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title"><b>Full Sleve T-Shirt</b></h5>
-                <p class="h6" id="dynamic-price"> Rs 720.00</p>
+                <h5 class="card-title"><b>Half Sleve T-Shirt</b></h5>
+                <div class="price">
+                  <p class="h6" id="dynamic-price"> Rs. 720.00</p>
+                  <p class="h6" id="discount-price"><s>Rs. 999.00</s></p>
+                </div>
       
                 <div class="add-to-cart">
-                  <button type="button" class="btn btn-primary">Add to cart</button>
+                  <button type="button" class="btn btn-primary id3">Add to cart</button>
                 </div>
               </div>
             </div>
@@ -93,10 +101,13 @@
               <img src="../images/Gents/Categories/Black full sleves tshirt.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title"><b>Full Sleve T-Shirt</b></h5>
-                <p class="h6" id="dynamic-price"> Rs 720.00</p>
+                <div class="price">
+                  <p class="h6" id="dynamic-price"> Rs. 720.00</p>
+                  <p class="h6" id="discount-price"><s>Rs. 999.00</s></p>
+                </div>
       
                 <div class="add-to-cart">
-                  <button type="button" class="btn btn-primary">Add to cart</button>
+                  <button type="button" class="btn btn-primary id4">Add to cart</button>
                 </div>
               </div>
             </div>
@@ -106,11 +117,14 @@
             <div class="card h-100">
               <img src="../images/Gents/Categories/Suit.jpg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title"><b>Full Sleve T-Shirt</b></h5>
-                <p class="h6" id="dynamic-price"> Rs 720.00</p>
+                <h5 class="card-title"><b>Suit</b></h5>
+                <div class="price">
+                  <p class="h6" id="dynamic-price"> Rs. 720.00</p>
+                  <p class="h6" id="discount-price"><s>Rs. 999.00</s></p>
+                </div>
       
                 <div class="add-to-cart">
-                  <button type="button" class="btn btn-primary">Add to cart</button>
+                  <button type="button" class="btn btn-primary id5">Add to cart</button>
                 </div>
               </div>
             </div>
@@ -120,11 +134,14 @@
             <div class="card h-100">
               <img src="../images/Gents/Categories/White tshirt.jpg" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title"><b>Full Sleve T-Shirt</b></h5>
-                <p class="h6" id="dynamic-price"> Rs 720.00</p>
+                <h5 class="card-title"><b>Half Sleve T-Shirt</b></h5>
+                <div class="price">
+                  <p class="h6" id="dynamic-price"> Rs. 720.00</p>
+                  <p class="h6" id="discount-price"><s>Rs. 999.00</s></p>
+                </div>
       
                 <div class="add-to-cart">
-                  <button type="button" class="btn btn-primary">Add to cart</button>
+                  <button type="button" class="btn btn-primary id6">Add to cart</button>
                 </div>
               </div>
             </div>
@@ -152,7 +169,27 @@
     -->
 
     <script>
+      $(".btn").click(function(){
+        
+        let clothIdArr = [];
+       // if localStorage is empty then add below line
+      if(!(JSON.parse(localStorage.getItem('clothIdArr')).size() > 0)){
+        
+        localStorage.setItem('clothIdArr', JSON.stringify(clothIdArr));
+      }
 
+        const array = $(this).attr('class').split(" "); 
+        console.log(array[2]);
+        //idArray.push(array[2]);
+        
+          
+        clothId = JSON.parse(localStorage.getItem('clothIdArr'));
+        clothId.push(array[2]);
+        console.log(clothIdArr);
+        localStorage.setItem('clothIdArr', JSON.stringify(clothId));
+       
+        //localStorage.setItem('ClothId', idArray);
+      });
     </script>
 </body>
 </html>

@@ -24,6 +24,23 @@
     box-shadow: 5px 6px 5px rgb(126, 126, 126);
 }
 
+.price{
+    display: flex;
+    flex-direction: row;
+}
+
+#dynamic-price{
+    margin-right: 10px;
+}
+
+#discount-price{
+    color: #F52121;
+}
+
+.card img{
+    height: 100%;
+    width: 100%;
+}
 /* .gents-wear{
     display: flex;
     flex-direction: column;
